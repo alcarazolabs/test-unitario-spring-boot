@@ -29,7 +29,7 @@ public class TipoMascotaService {
         TipoMascota tipoMascotaGuardado = tipoMascotaRepository.save(nuevoTipoMascota);
 
         URI uriTipoMascota = ucb
-                .path("tipomascotas/{id}")
+                .path("api/tipomascotas/{id}")
                 .buildAndExpand(tipoMascotaGuardado.getId())
                 .toUri();
         //return ResponseEntity.created(uriTipoMascota).build();
